@@ -5,7 +5,7 @@ class HoaDetails {
   #pmcWebsite;
   #pmcEmail;
   #pmcNumber;
-  #ccnr;
+  #ccnr; // Covenants, Conditions, and Restrictions
   #rulesandregulations;
   #otherdocument;
 

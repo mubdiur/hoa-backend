@@ -27,4 +27,4 @@ const cityCorporationSchema = new Schema({
   },
 });
 
-export default cityCorporationSchema;
+module.exports = cityCorporationSchema;
