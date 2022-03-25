@@ -3,7 +3,7 @@ class Property {
   #hoaId;
   #propertyImage;
   #propertyAddress;
-  #residentName;
+  #residentNames;
   #propertyCode;
 
   constructor(
@@ -11,14 +11,14 @@ class Property {
     hoaId,
     propertyImage,
     propertyAddress,
-    residentName,
+    residentNames,
     propertyCode
   ) {
     this.#id = id;
     this.#hoaId = hoaId;
     this.#propertyImage = propertyImage;
     this.#propertyAddress = propertyAddress;
-    this.#residentName = residentName;
+    this.#residentNames = residentNames;
     this.#propertyCode = propertyCode;
   }
 
@@ -35,8 +35,8 @@ class Property {
   set propertyAddress(propertyAddress) {
     this.#propertyAddress = propertyAddress;
   }
-  set residentName(residentName) {
-    this.#residentName = residentName;
+  set residentNames(residentNames) {
+    this.#residentNames = residentNames;
   }
   set propertyCode(propertyCode) {
     this.#propertyCode = propertyCode;
@@ -55,8 +55,8 @@ class Property {
   get propertyAddress() {
     return this.#propertyAddress;
   }
-  get residentName() {
-    return this.#residentName;
+  get residentNames() {
+    return this.#residentNames;
   }
   get propertyCode() {
     return this.#propertyCode;

@@ -13,6 +13,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const hoaSchema = new Schema({
+  _id: Schema.Types.ObjectId,
   projectId: {
     type: Schema.Types.ObjectId,
     required: true,

@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const hoaAmnitySchema = new Schema({
+  _id: Schema.Types.ObjectId,
   hoaId: {
     type: Schema.Types.ObjectId,
     required: true,
