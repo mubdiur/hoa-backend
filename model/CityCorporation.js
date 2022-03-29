@@ -26,5 +26,5 @@ const cityCorporationSchema = new Schema({
         required: true,
     },
 });
-
-module.exports = cityCorporationSchema;
+const model = mongoose.model("CityCorporation", cityCorporationSchema);
+module.exports = model;
