@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -5,6 +7,8 @@ const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const upload = multer();
+
+const firebaseAuthCheck = require("./firebaseAuthCheck");
 
 const createApi = require("./api/create");
 const readApi = require("./api/read");
@@ -31,7 +35,7 @@ app.use(upload.array());
 app.use(express.static('public'));
 
 
-app.use("/api/create", createApi);
+app.use("/api/create", firebaseAuthCheck, createApi);
 // app.use("/api/read", readApi);
 // app.use("/api/update", updateApi);
 // app.use("/api/delete", deleteApi);
