@@ -11,19 +11,19 @@ const CityCorporation = require("../model/CityCorporation");
 //   res.send('Birds home page')
 // })
 // define the about route
-router.post("/city-corporation",async (req, res) => {
-    try {
-        const cityCorporation = new CityCorporation({
-            division: req.body.division,
-            mayor: req.body.mayor,
-            website: req.body.website,
-            email: req.body.email,
-            phoneNumber: req.body.phonenumber
-        });
-        await cityCorporation.save();
-        res.status(201).send(cityCorporation);
-    } catch (error) {
-        res.status(400).send(error);
-    }
+router.post("/city-corporation", async (req, res) => {
+  try {
+    const cityCorporation = new CityCorporation({
+      division: req.body.division,
+      mayor: req.body.mayor,
+      website: req.body.website,
+      email: req.body.email,
+      phoneNumber: req.body.phonenumber,
+    });
+    await cityCorporation.save();
+    res.status(201).send(cityCorporation);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 });
 module.exports = router;
